@@ -24,3 +24,13 @@ class Task:
     """ Method to cancel a task """
     def cancelled(self):
         self.status = "Cancelled"
+
+    """ to_json() method overwritten """
+    def to_json(self):
+        return {
+            "task_id": self.task_id,
+            "task_type": self.task_type,
+            "name": self.name,
+            "due_date": self.due_date,
+            "status": self.status
+        }
