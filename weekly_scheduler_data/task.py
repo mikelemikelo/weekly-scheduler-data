@@ -8,7 +8,7 @@ class Task:
     def __init__(self, task_id, task_type, name, due_date):
         """ Create a new task """
         if task_id is None:
-            self.task_id = uuid.uuid4()
+            self.task_id = str(uuid.uuid4())
         else:
             self.task_id = task_id
 
